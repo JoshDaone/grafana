@@ -63,7 +63,7 @@ func Search(c *models.ReqContext) Response {
 
 	err := bus.Dispatch(&searchQuery)
 	if err != nil {
-		return Error(500, "Search failed", err)
+		return Error(500, "搜索失败", err)
 	}
 
 	c.TimeRequest(metrics.MApiDashboardSearch)
